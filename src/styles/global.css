@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   line-height: 1.5;
   margin: 0 auto;
@@ -16,6 +20,62 @@ html {
   font-family: sans-serif;
 }
 
-* {
-  box-sizing: border-box;
+.hamburger {
+  cursor: pointer;
+  padding-right: 20px;
+}
+
+.hamburger .line {
+  background-color: #ff9776;
+  display: block;
+  height: 5px;
+  margin-bottom: 10px;
+  width: 40px;
+}
+
+.nav-links {
+  background-color: #ff9776;
+  display: none;
+  left: 48px;
+  margin: 0;
+  top: 5rem;
+  width: 100%;
+}
+
+.nav-links a {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 0;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  background-color: #ff9776;
+}
+
+.expanded {
+  display: unset;
+}
+
+@media screen and (min-width: 636px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav-links {
+    background: none;
+    display: block;
+    margin-left: 5em;
+    position: static;
+    width: auto;
+  }
+
+  .nav-links a {
+    display: inline-block;
+    padding: 15px 20px;
+  }
 }
